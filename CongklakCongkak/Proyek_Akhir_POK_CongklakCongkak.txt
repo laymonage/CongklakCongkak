@@ -1,0 +1,52 @@
+   _____                  _    _       _       _____                  _         _
+  / ____|                | |  | |     | |     / ____|                | |       | |
+ | |     ___  _ __   __ _| | _| | __ _| | __ | |     ___  _ __   __ _| | ____ _| | __
+ | |    / _ \| '_ \ / _` | |/ / |/ _` | |/ / | |    / _ \| '_ \ / _` | |/ / _` | |/ /
+ | |___| (_) | | | | (_| |   <| | (_| |   <  | |___| (_) | | | | (_| |   < (_| |   <
+  \_____\___/|_| |_|\__, |_|\_\_|\__,_|_|\_\  \_____\___/|_| |_|\__, |_|\_\__,_|_|\_\
+                     __/ |                                       __/ |
+                    |___/                                       |___/
+
+
+Selamat datang pada permainan Congklak Congkak!
+
+Program ini mengaplikasikan permainan tradisional
+congkak, permainan yang membutuhkan 2 pemain.
+
+Silahkan siapkan Hapsim-mu, buka konfigurasi CongklakCongkak.xml
+dan jalankan file .asm nya dengan AVR Studio 4.
+
+Tentukan Pemain 1 (yang akan berjalan pertama) dan Pemain 2.
+Pemain 1 mendapat 7 sawah dan 1 lumbung (di paling kanan) di baris pertama LCD.
+Pemain 2 mendapat 7 sawah dan 1 lumbung (di paling kiri) di baris kedua LCD.
+
+Tahap-tahap tiap giliran:
+- Tahap 1: Pilih Sawah (manual)
+  Pemain yang mendapat giliran harus memilih salah satu sawahnya
+  untuk diambil bijinya. Tahap ini berbatas waktu. Waktu dilambangkan
+  dengan jumlah lampu kuning yang menyala.
+  Jika waktu habis, seperempat biji di lumbung pemain akan dipindahkan
+  ke lumbung lawan.
+  * Tekan "Roll" untuk menggeser kursor searah jarum jam
+    dan tekan "Select" untuk memilih.
+
+- Tahap 2: Jalan (otomatis oleh program)
+  Dari sawah yang dipilih, biji yang sudah diambil akan diletakkan
+  satu-persatu ke semua sawah yang dilewati dan juga ke lumbung pemain
+  pemilik giliran (bukan lumbung lawan).
+  - Jika biji terakhir diletakkan di sawah tidak kosong,
+    maka semua biji di sawah terakhir itu diambil dan ulang tahap 2(Jalan).
+  - Jika biji terakhir diletakkan di sawah kosong milik lawan,
+    maka giliran berakhir dan dilanjutkan giliran lawan.
+  - Jika biji terakhir diletakkan di sawah kosong milik pemain pemilik giliran,
+    maka semua biji di sawah lawan tepat di seberang sawah terakhir dipindahkan
+    ke lumbung milik pemain.
+
+  Jika biji terakhir diletakkan di lumbung milik pemain pemilik giliran,
+  pemain mendapat giliran tambahan dan mengulang tahap 1 (Pilih Sawah).
+  * Tekan "Roll" untuk mempercepat tahap Jalan.
+
+Permainan selesai jika semua sawah milik kedua pemain sudah tidak memiliki biji.
+Pemilik lumbung dengan biji terbanyak adalah pemenangnya.
+
+Selamat bermain!

@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<HAPSIM>
+   <General>
+      <Build>2005</Build>
+      <Position>
+         <top>303</top>
+         <bottom>907</bottom>
+         <left>629</left>
+         <right>1615</right>
+      </Position>
+      <StayOnTop>1</StayOnTop>
+      <Target>ATmega8515</Target>
+   </General>
+   <Views>
+      <LCD>
+         <Name>LCD1</Name>
+         <Position>
+            <top>1</top>
+            <left>210</left>
+         </Position>
+         <DisplayConfig>
+            <columns>29</columns>
+            <rows>2</rows>
+            <bkColor>0x80ffff</bkColor>
+            <size>3</size>
+         </DisplayConfig>
+         <PortMapping>
+            <DataPort>
+               <Port>PORTB</Port>
+               <HighNibble>bit 4..7</HighNibble>
+               <LowNibble>N.C.</LowNibble>
+            </DataPort>
+            <EnablePin>
+               <Port>PORTA</Port>
+               <Bit>0</Bit>
+            </EnablePin>
+            <RW_Pin>
+               <WriteOnly>0</WriteOnly>
+               <Port>PORTA</Port>
+               <Bit>2</Bit>
+            </RW_Pin>
+            <RS_Pin>
+               <Port>PORTA</Port>
+               <Bit>1</Bit>
+            </RS_Pin>
+         </PortMapping>
+      </LCD>
+      <Buttons>
+         <Name>Buttons1</Name>
+         <Position>
+            <top>90</top>
+            <left>352</left>
+         </Position>
+         <Config index="0">
+            <Name>Select</Name>
+            <PortPin>
+               <Port>PORTD</Port>
+               <Bit>2</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <Config index="1">
+            <Name>Roll</Name>
+            <PortPin>
+               <Port>PORTD</Port>
+               <Bit>3</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <Config index="2">
+            <Name></Name>
+            <PortPin>
+               <Port>PORTD</Port>
+               <Bit>6</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <Config index="3">
+            <Name></Name>
+            <PortPin>
+               <Port>PORTD</Port>
+               <Bit>7</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <TrinaryGroupEnable index="0">0</TrinaryGroupEnable>
+         <TrinaryGroupEnable index="1">0</TrinaryGroupEnable>
+      </Buttons>
+      <LEDs>
+         <Name>LEDs1</Name>
+         <Position>
+            <top>91</top>
+            <left>492</left>
+         </Position>
+         <Config index="0">
+            <Color>Blue</Color>
+            <Name>Player 1</Name>
+            <PortPin>
+               <Port>PORTC</Port>
+               <Bit>0</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <Config index="1">
+            <Color>Red</Color>
+            <Name>Player 2</Name>
+            <PortPin>
+               <Port>PORTC</Port>
+               <Bit>1</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <Config index="2">
+            <Color>Yellow</Color>
+            <Name>5</Name>
+            <PortPin>
+               <Port>PORTC</Port>
+               <Bit>7</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <Config index="3">
+            <Color>Yellow</Color>
+            <Name>4</Name>
+            <PortPin>
+               <Port>PORTC</Port>
+               <Bit>6</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <Config index="4">
+            <Color>Yellow</Color>
+            <Name>3</Name>
+            <PortPin>
+               <Port>PORTC</Port>
+               <Bit>5</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <Config index="5">
+            <Color>Yellow</Color>
+            <Name>2</Name>
+            <PortPin>
+               <Port>PORTC</Port>
+               <Bit>4</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <Config index="6">
+            <Color>Yellow</Color>
+            <Name>1</Name>
+            <PortPin>
+               <Port>PORTC</Port>
+               <Bit>3</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+         <Config index="7">
+            <Color>Yellow</Color>
+            <Name>0</Name>
+            <PortPin>
+               <Port>PORTC</Port>
+               <Bit>2</Bit>
+            </PortPin>
+            <Invert>0</Invert>
+         </Config>
+      </LEDs>
+   </Views>
+</HAPSIM>
